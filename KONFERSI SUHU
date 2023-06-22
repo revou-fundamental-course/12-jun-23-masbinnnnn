@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<title> Konversi Suhu Celcius ke Fahrenheit </title>
+<body>
+
+<h2> KONVERSI SUHU </h2>
+<p> Masukkan suhu derajat Celsius (*C) ke kotak dibawah, lalu klik tombol Konversi untuk mendapatkan hasil Konversi dalam bentuk Fahrenheit (*F) </p>
+<p>
+  <label>Celsius</label>
+  <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+
+<p> Tombolnya baru akan dibuat gaes, maaf yaa, BELUM ADA CSSNYA </p>
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
+}
+</script>
